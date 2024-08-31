@@ -1,4 +1,4 @@
-package com.example.controller;
+package com.example.websecurity.user.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;

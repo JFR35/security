@@ -1,5 +1,7 @@
-package com.example.user;
+package com.example.websecurity.application.service;
 
+import com.example.websecurity.domain.model.entity.MyUser;
+import com.example.websecurity.infrastructure.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

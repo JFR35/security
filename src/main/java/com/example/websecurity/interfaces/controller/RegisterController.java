@@ -1,8 +1,8 @@
-package com.example.controller;
+package com.example.websecurity.user.controller;
 
-import com.example.user.MyUser;
-import com.example.user.RoleRepository;
-import com.example.user.UserService;
+import com.example.websecurity.user.model.entity.MyUser;
+import com.example.websecurity.user.model.repository.RoleRepository;
+import com.example.websecurity.user.model.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

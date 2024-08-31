@@ -1,5 +1,6 @@
-package com.example.user;
+package com.example.websecurity.domain.repository;
 
+import com.example.websecurity.domain.model.MyUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package com.example.user;
+package com.example.websecurity.domain.model.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

@@ -1,13 +1,10 @@
-package com.example.controller;
+package com.example.websecurity.user.controller;
 
-import com.example.user.MyUser;
+import com.example.websecurity.user.model.entity.MyUser;
 import lombok.RequiredArgsConstructor;
-import org.springframework.boot.Banner;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 @RequiredArgsConstructor

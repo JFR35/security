@@ -1,6 +1,6 @@
-package com.example.user;
+package com.example.websecurity.application.service;
 
-import java.util.Set;
+import com.example.websecurity.domain.model.entity.MyUser;
 
 public interface UserService {
     void registerUser(MyUser user) throws Exception;
