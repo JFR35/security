@@ -1,4 +1,4 @@
-package com.example.websecurity.infrastructure;
+package com.example.websecurity.infrastructure.persistence;
 
 import com.example.websecurity.domain.model.Role;
 import com.example.websecurity.domain.repository.RoleRepository;

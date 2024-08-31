@@ -2,6 +2,7 @@ package com.example.websecurity.interfaces.api;
 
 import com.example.websecurity.application.service.UserService;
 import com.example.websecurity.domain.model.MyUser;
+import com.example.websecurity.infrastructure.security.JwtUtil;
 import com.example.websecurity.interfaces.dto.UserLoginDto;
 import com.example.websecurity.interfaces.dto.UserRegistrationDto;
 import lombok.RequiredArgsConstructor;
@@ -10,12 +11,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 @RestController
 @RequestMapping("/api")
 @RequiredArgsConstructor
 public class ApiController {
 
     private final UserService userService;
+    private final JwtUtil jwtUtil;
 
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@RequestBody UserRegistrationDto registrationDto) {
@@ -32,7 +35,7 @@ public class ApiController {
         try {
             MyUser user = userService.loginUser(loginDto);
             // Generate JWT token here
-            String token = "dummy-token"; // Replace with actual JWT token generation, de momento no hay tokens
+            String token = jwtUtil.generateToken(user.getUsername());
             return ResponseEntity.ok(token);
         } catch (Exception ex) {
             return ResponseEntity.badRequest().body("Invalid credentials");
