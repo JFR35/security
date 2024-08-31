@@ -1,4 +1,4 @@
-package com.example.websecurity.user.controller;
+package com.example.websecurity.interfaces.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

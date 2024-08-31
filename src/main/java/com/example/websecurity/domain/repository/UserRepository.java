@@ -1,10 +1,10 @@
 package com.example.websecurity.domain.repository;
 
 import com.example.websecurity.domain.model.MyUser;
-import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
 
-public interface UserRepository extends JpaRepository<MyUser, Long> {
+public interface UserRepository {
     Optional<MyUser> findByUsername(String username);
+    MyUser save(MyUser user);
 }

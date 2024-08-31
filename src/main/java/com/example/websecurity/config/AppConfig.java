@@ -1,7 +1,7 @@
-package com.example.websecurity.user.config;
+package com.example.websecurity.config;
 
 
-import com.example.websecurity.user.model.repository.UserRepository;
+import com.example.websecurity.domain.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

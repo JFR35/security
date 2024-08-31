@@ -1,4 +1,4 @@
-package com.example.websecurity.domain.model.exception;
+package com.example.websecurity.domain.exception;
 
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;

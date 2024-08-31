@@ -1,9 +1,9 @@
 package com.example.service.registerTest;
 
 
-import com.example.user.MyUser;
-import com.example.user.UserRepository;
-import com.example.user.UserService;
+import com.example.websecurity.domain.model.MyUser;
+import com.example.websecurity.domain.repository.UserRepository;
+import com.example.websecurity.application.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

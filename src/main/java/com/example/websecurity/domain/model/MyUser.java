@@ -1,4 +1,4 @@
-package com.example.websecurity.domain.model.entity;
+package com.example.websecurity.domain.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;

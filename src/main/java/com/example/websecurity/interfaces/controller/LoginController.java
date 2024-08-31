@@ -1,6 +1,6 @@
-package com.example.websecurity.user.controller;
+package com.example.websecurity.interfaces.controller;
 
-import com.example.websecurity.user.model.entity.MyUser;
+import com.example.websecurity.domain.model.MyUser;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

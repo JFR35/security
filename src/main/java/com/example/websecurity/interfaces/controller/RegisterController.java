@@ -1,8 +1,9 @@
-package com.example.websecurity.user.controller;
+package com.example.websecurity.interfaces.controller;
 
-import com.example.websecurity.user.model.entity.MyUser;
-import com.example.websecurity.user.model.repository.RoleRepository;
-import com.example.websecurity.user.model.service.UserService;
+import com.example.websecurity.domain.model.MyUser;
+import com.example.websecurity.domain.repository.RoleRepository;
+import com.example.websecurity.application.service.UserService;
+import com.example.websecurity.interfaces.dto.UserRegistrationDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,14 +20,14 @@ public class RegisterController {
 
     @GetMapping("/register")
     public String showRegistrationForm(Model model) {
-        model.addAttribute("user", new MyUser());
+        model.addAttribute("user", new UserRegistrationDto());
         return "register"; // Nombre del archivo HTML para el formulario de registro
     }
 
     @PostMapping("/register")
-    public String registerUser(@ModelAttribute("user") MyUser user, Model model) {
+    public String registerUser(@ModelAttribute("userRegistrationDtop") UserRegistrationDto userRegistrationDto, Model model) {
         try {
-            userService.registerUser(user); // Asigna el rol predeterminado en el servicio
+            userService.registerUser(userRegistrationDto); // Asigna el rol predeterminado en el servicio
             return "redirect:/login";
         } catch (Exception ex) {
             model.addAttribute("error", "Error al registrar el usuario: " + ex.getMessage());

@@ -1,9 +1,11 @@
 package com.example.websecurity.application.service;
 
-import com.example.websecurity.domain.model.entity.MyUser;
+import com.example.websecurity.domain.model.MyUser;
+import com.example.websecurity.interfaces.dto.UserLoginDto;
+import com.example.websecurity.interfaces.dto.UserRegistrationDto;
 
 public interface UserService {
-    void registerUser(MyUser user) throws Exception;
+    void registerUser(UserRegistrationDto registrationDto) throws Exception;
 
-    MyUser loginUser(String username, String rawPassword) throws Exception;
+    MyUser loginUser(UserLoginDto loginDto) throws Exception;
 }

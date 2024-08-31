@@ -1,4 +1,4 @@
-package com.example.websecurity.user.config;
+package com.example.websecurity.config;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -22,6 +22,7 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable) // Desactiva CSRF para simplificar
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/views/**", "/home", "/login", "/register").permitAll() // Permite acceso a todas las vistas
+                        .requestMatchers("/api/register", "/api/login").permitAll() // Permite acceso a los endpoints de API de register y login
                         .anyRequest().permitAll() // Permite acceso a cualquier otra solicitud
                 )
                 .formLogin(formLogin -> formLogin

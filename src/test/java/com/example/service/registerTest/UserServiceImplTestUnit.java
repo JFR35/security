@@ -1,8 +1,8 @@
 package com.example.service.registerTest;
 
-import com.example.user.MyUser;
-import com.example.user.UserRepository;
-import com.example.user.UserServiceImpl;
+import com.example.websecurity.domain.model.MyUser;
+import com.example.websecurity.domain.repository.UserRepository;
+import com.example.websecurity.application.impl.UserServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
